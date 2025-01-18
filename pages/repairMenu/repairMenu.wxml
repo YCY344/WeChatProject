@@ -1,0 +1,11 @@
+<view class="repair-menu">
+  <view class="menu">
+    <view class="menu-item" wx:for="{{ menuList }}" wx:key="index" bind:tap="menuClick" data-url="{{ item.url }}">
+      <image class="icon" src="{{ item.icon }}" mode="" />
+      <view class="text-list">
+        <view class="title">{{ item.title }}</view>
+        <view class="desc">{{ item.desc }}</view>
+      </view>
+    </view>
+  </view>
+</view>

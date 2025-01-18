@@ -1,0 +1,31 @@
+.register-page {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 200rpx;
+  box-sizing: border-box;
+  padding: 40rpx;
+  border-radius: 20rpx;
+}
+
+.btn-item {
+  margin-top: 40rpx;
+}
+
+.btn-item .t-button {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.title {
+  font-size: 46rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+}

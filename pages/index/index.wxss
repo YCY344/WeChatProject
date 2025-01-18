@@ -1,0 +1,93 @@
+.box-list {
+  display: flex;
+  width: 90%;
+  box-sizing: border-box;
+  margin: 50rpx auto;
+  align-items: center;
+  gap: 0 20rpx;
+}
+
+.box-item {
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  gap: 0 30rpx;
+  box-sizing: border-box;
+  flex: 1;
+  padding: 20rpx;
+  color: rgb(18, 20, 22);
+}
+
+.box-list .box-item:first-child {
+  background-color: rgb(49, 216, 208);
+}
+
+.box-list .box-item:last-child {
+  background-color: rgb(146, 221, 25);
+}
+
+.box-item image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.box-item .text-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx 0;
+}
+
+
+
+.text-list .desc {
+  font-size: 24rpx;
+}
+
+.footer-example{
+  padding: 8rpx 0;
+  margin-top: 240rpx;
+}
+
+
+.block {  
+  width: 100vw; /* 让块宽度占满视口 */  
+  height: 150px;  
+  background: var(--td-bg-color-container); /* 背景颜色 */  
+  border-top-left-radius: 16rpx; /* 圆角 */  
+  border-top-right-radius: 16rpx;  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 加入阴影 */  
+  display: flex; /* 使用 flex盒子布局 */  
+  flex-direction: column; /* 垂直排列 */  
+  justify-content: space-between; /* 块内元素上下分布 */  
+}  
+
+.header {  
+  display: flex;  
+  align-items: center;  
+  height: 116rpx; /* 头部高度 */  
+  padding: 0 20rpx; /* 为头部添加内边距 */  
+  background: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */  
+  border-top-left-radius: 16rpx; /* 圆角 */  
+  border-top-right-radius: 16rpx;   
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 加入阴影 */  
+}  
+
+.title {  
+  flex: 1;  
+  text-align: center;  
+  font-weight: 600;  
+  font-size: 36rpx;  
+  color: var(--td-text-color-primary);  
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* 文字阴影 */  
+}  
+
+.button1 {  
+  font-size: 32rpx;  
+  padding: 12rpx 32rpx; /* 增加上下内边距，左右也有间距 */  
+  border-radius: 8rpx; /* 按钮圆角 */  
+  border: none; /* 去掉默认边框 */  
+  cursor: pointer; /* 显示光标 */  
+  transition: background-color 0.3s, transform 0.3s; /* 动画过渡效果 */  
+}  
+
+

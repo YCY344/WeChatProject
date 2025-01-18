@@ -1,0 +1,96 @@
+.container {  
+  display: flex;  
+  flex-direction: column;  
+  height: 100vh; /* 使容器充满整个视口 */  
+}  
+
+.header {  
+  background-color: #f8f8f8;  
+  padding: 10px;  
+  text-align: center;  
+  font-size: 18px;  
+  border-bottom: 1px solid #ccc; /* 底部边框 */  
+}  
+
+.messages {  
+  flex: 1; /* 使消息区域占据剩余的空间 */  
+  padding: 10px;  
+  overflow-y: auto; /* 允许滚动 */  
+  background-color: #ffffff;  
+}  
+
+.item {  
+  margin-bottom: 10px; /* 每条消息的底部间距 */  
+}  
+
+.user {  
+  display: flex;  
+  align-items: center; /* 图像和内容水平对齐 */  
+  flex-wrap: nowrap; /* 避免换行 */  
+  justify-content: flex-end; /* 用户消息右侧显示 */  
+}  
+
+.assistant {  
+  display: flex;  
+  align-items: center; /* 图像和内容水平对齐 */  
+  flex-wrap: nowrap; /* 避免换行 */  
+  padding: 10px;  
+}  
+
+/* 图像样式 */  
+.image {  
+  width: 40px; /* 头像宽度 */  
+  height: 40px; /* 头像高度 */  
+  border-radius: 50%; /* 圆形图像 */  
+  margin-right: 10px; /* 图像与消息内容之间的间距 */  
+}  
+
+/* 消息内容样式 */  
+.content {  
+  max-width: 70%; /* 消息内容最大宽度 */  
+  padding: 10px; /* 内容内边距 */  
+  border-radius: 8px; /* 圆角边框 */  
+}  
+
+/* 用户消息样式 */  
+.user .content {  
+  background-color: #e0f7fa; /* 用户消息背景色 */  
+  align-self: flex-end; /* 用户消息右侧显示 */  
+}  
+
+/* 客服助手消息样式 */  
+.assistant .content {  
+  background-color: #ffe0b2; /* 客服消息背景色 */  
+  align-self: flex-start; /* 客服消息左侧显示 */  
+}  
+
+/* 输入区域样式 */  
+.input-area {  
+  display: flex;  
+  align-items: center; /* 输入框和按钮垂直居中 */  
+  padding: 10px;  
+  border-top: 1px solid #ccc; /* 上边框 */  
+  background-color: #f0f0f0; /* 输入区域背景色 */  
+}  
+
+/* 输入框样式 */  
+.input {  
+  flex: 1; /* 输入框占据剩余空间 */  
+  height: 40px; /* 输入框高度 */  
+  border: 1px solid #ccc; /* 输入框边框 */  
+  border-radius: 4px; /* 圆角 */  
+  padding: 0 10px; /* 内边距 */  
+}  
+
+.send-button {  
+  margin-left: 10px; /* 按钮与输入框之间的间距 */  
+  background-color: #007AFF; /* 按钮背景色 */  
+  color: white; /* 按钮文字颜色 */  
+  border: none; /* 无边框 */  
+  border-radius: 4px; /* 圆角 */  
+  padding: 0 15px; /* 按钮内边距 */  
+  height: 40px; /* 按钮高度 */  
+  display: flex; /* 使用 flexbox 对齐内容 */  
+  justify-content: center; /* 水平居中 */  
+  align-items: center; /* 垂直居中 */  
+} 

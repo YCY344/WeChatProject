@@ -1,0 +1,9 @@
+.btn-item {
+  background-color: #fff;
+  margin-top: 10rpx;
+  padding: 32rpx;
+}
+
+.submit-btn {
+  width: 100%;
+}

@@ -1,0 +1,49 @@
+
+
+.info-container {
+  width: 95%;
+  margin: 40rpx auto;
+  box-sizing: border-box;
+  padding: 60rpx 20rpx;
+  display: flex;
+  align-items: center;
+  gap: 0 40rpx;
+  border-radius: 20rpx;
+}
+
+.avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.nickName {
+  color: rgb(8, 8, 8);
+}
+
+.text-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx 0;
+  color: rgb(8, 8, 8);
+}
+
+.text-list .title {
+  font-weight: bold;
+  font-size: 42rpx;
+}
+
+.text-list .desc {
+  font-size: 30rpx;
+}
+
+.quit-btn {
+  width: 80%;
+  margin: 0 auto;
+  display: block !important;
+}
+
+.footer-example{
+  padding: 8rpx 0;
+  margin-top: 380rpx;
+}

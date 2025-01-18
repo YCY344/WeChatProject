@@ -1,0 +1,10 @@
+.container {
+  width: 90%;
+  margin: 40rpx auto;
+}
+
+.quit-btn {
+  display: block !important;
+  margin: 40rpx auto;
+  width: 80%;
+}

@@ -1,0 +1,15 @@
+<view class="advice-result-page">
+  <view class="box">
+    <view class="box-title">反馈结果</view>
+    <view class="box-content">{{ info.result ? info.result : '-' }}</view>
+  </view>
+  <view class="box">
+    <view class="box-title">反馈信息</view>
+    <view class="info">
+      <view class="info-item">姓名：{{ info.name }}</view>
+      <view class="info-item">手机号码：{{ info.phone }}</view>
+      <view class="info-item">提交时间：{{ info.create_time }}</view>
+      <view class="info-item">反馈内容：{{ info.content }}</view>
+    </view>
+  </view>
+</view>

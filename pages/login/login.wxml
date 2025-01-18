@@ -1,0 +1,22 @@
+<view class="login-page" style="background-image: url('../../assets/123.jpg@h_1280');">
+  <view class="container">
+    <view class="form-item" style="margin-bottom: 20rpx; margin-left: 20rpx;">
+      <t-radio-group default-value="0" borderless t-class="box" value="{{ role }}" bind:change="getRole">
+        <t-radio style="margin-right: 20rpx;" block="{{false}}" label="普通用户" value="{{0}}" />
+        <t-radio block="{{false}}" label="工作人员" value="{{1}}" />
+      </t-radio-group>
+    </view>
+    <view class="form-item">
+      <t-input label="账号" placeholder="请输入您的账号" value="{{ account }}" bind:change="getAccount" />
+    </view>
+    <view class="form-item">
+      <t-input label="密码" placeholder="请输入您的密码" value="{{ password }}" bind:change="getPassword" />
+    </view>
+    <view class="to-register-text" bind:tap="toRegister">
+      去注册
+    </view>
+    <view class="form-item btn-item">
+      <t-button theme="primary" size="large" bind:tap="submit">登录</t-button>
+    </view>
+  </view>
+</view>

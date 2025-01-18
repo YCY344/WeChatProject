@@ -1,0 +1,21 @@
+
+.upload-view {
+  background-color: #fff;
+  padding: 32rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx 0;
+  font-size: 32rpx;
+  margin-bottom: 4rpx;
+}
+
+.btn-item {
+  background-color: #fff;
+  margin-top: 10rpx;
+  padding: 32rpx;
+}
+
+.submit-btn {
+  width: 100%;
+}

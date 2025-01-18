@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/register/register",
+    "pages/index/index",
+    "pages/personal/personal",
+    "pages/getInfo/getInfo",
+    "pages/repairMenu/repairMenu",
+    "pages/repair/repair",
+    "pages/repairHistory/repairHistory",
+    "pages/advice/advice",
+    "pages/workIndex/workIndex",
+    "pages/adviceMenu/adviceMenu",
+    "pages/myAdvice/myAdvice",
+    "pages/adviceResult/adviceResult",
+    "pages/repairResult/repairResult",
+    "pages/aicustomerservice/aicustomerservice"
+  ],
+  "usingComponents": {
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-icon": "tdesign-miniprogram/icon/icon",
+    "t-input": "tdesign-miniprogram/input/input",
+    "t-radio": "tdesign-miniprogram/radio/radio",
+    "t-radio-group": "tdesign-miniprogram/radio-group/radio-group",
+    "t-swiper": "tdesign-miniprogram/swiper/swiper",
+    "t-swiper-nav": "tdesign-miniprogram/swiper-nav/swiper-nav",
+    "t-image": "tdesign-miniprogram/image/image",
+    "t-calendar": "tdesign-miniprogram/calendar/calendar",
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "t-date-time-picker": "tdesign-miniprogram/date-time-picker/date-time-picker",
+    "t-picker": "tdesign-miniprogram/picker/picker",
+    "t-picker-item": "tdesign-miniprogram/picker-item/picker-item",
+    "t-textarea": "tdesign-miniprogram/textarea/textarea",
+    "t-upload": "tdesign-miniprogram/upload/upload",
+    "t-tabs": "tdesign-miniprogram/tabs/tabs",
+    "t-tab-panel": "tdesign-miniprogram/tab-panel/tab-panel",
+    "t-dialog": "tdesign-miniprogram/dialog/dialog",
+    "t-notice-bar": "tdesign-miniprogram/notice-bar/notice-bar",
+    "t-fab": "tdesign-miniprogram/fab/fab",
+    "t-footer": "tdesign-miniprogram/footer/footer",
+    "t-popup": "tdesign-miniprogram/popup/popup"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f6f6f6",
+    "backgroundColor": "#f6f6f6",
+    "navigationBarTitleText": "报修小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "iconPath": "assets/index.png",
+        "pagePath": "pages/index/index",
+        "selectedIconPath": "assets/index_fill.png",
+        "text": "首页"
+      },
+      {
+        "iconPath": "assets/personal.png",
+        "pagePath": "pages/personal/personal",
+        "selectedIconPath": "assets/personal_fill.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

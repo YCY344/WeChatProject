@@ -1,0 +1,25 @@
+<!-- pages/aicustomerservice/aicustomerservice.wxml -->  
+<view class="container">  
+    <view class="header">  
+        <text>智能客服</text>  
+    </view>  
+
+    <scroll-view class="messages" scroll-y="true" scroll-top="{{scrollTop}}" style="height: 70vh;">  <!-- 使用 scroll-view 组件 -->  
+        <view class="item" wx:for="{{messages}}" wx:key="index">  
+            <view class="user" wx:if="{{item.role=='user'}}">  
+                <view class="content">{{item.content}}</view>  
+                <image class="image" src="{{item.image}}" mode=""/>  
+            </view>  
+            <view class="assistant" wx:if="{{item.role=='assistant'}}">  
+                <image class="image" src="{{item.image}}" mode=""/>  
+                <view class="content">{{item.content}}</view>  
+            </view>  
+        </view>  
+    </scroll-view>  
+   
+    <view class="input-area">  
+        <input confirm-type="send" bindconfirm="{{status==0?'sumbit':''}}" value="{{content}}" bindinput="handleInput" placeholder="请输入您的问题..." class="input" />  
+        <view class="send-button" wx:if="{{status==0}}" bindtap="sumbit">发送</view>
+        <view class="send-button" wx:if="{{status==1}}" style="background-color:#7f7f7f ;">发送</view>    
+    </view>  
+</view>

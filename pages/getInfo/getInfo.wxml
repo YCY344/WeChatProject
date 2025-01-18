@@ -1,0 +1,12 @@
+<view class="get-info-page">
+  <t-button class="get-info-btn" open-type="chooseAvatar" bind:chooseavatar="getAvatar">
+    <t-image class="avatar-image" src="{{avatarUrl}}" mode="aspectFill"  />
+  </t-button>
+
+  <view class="get-nickname">
+    <text>昵称：</text>
+    <input type="nickname" label="昵称" placeholder="请输入您的昵称" value="{{ nickName }}" bind:change="getNickName" />
+  </view>
+
+  <t-button class="submit-btn" theme="primary" bind:tap="submit">确定</t-button>
+</view>

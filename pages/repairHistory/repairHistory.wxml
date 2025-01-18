@@ -1,0 +1,39 @@
+<view class="repair-history-page">
+  <t-tabs value="{{tabNow}}" bind:change="onTabsChange" t-class="custom-tabs">
+    <block wx:for="{{ tabList }}" wx:key="index">
+      <t-tab-panel label="{{ item.label }}" value="{{ item.value }}" />
+    </block>
+  </t-tabs>
+  <view class="order-list">
+    <view class="order-item" wx:for="{{ list }}" wx:key="index" data-item="{{ item }}" bind:tap="viewResult">
+      <view class="top">
+        <view class="top-left">维修单号：{{ item.id }}</view>
+        <view class="top-right">{{ item.status }}</view>
+      </view>
+      <view class="info">
+        <view class="info-item">
+          <text class="label">故障类型：</text>
+          <text class="value">{{ item.fault_type }}</text>
+        </view>
+        <view class="info-item">
+          <text class="label">报修时间：</text>
+          <text class="value">{{ item.create_time }}</text>
+        </view>
+      </view>
+      <view class="btn-list" wx:if="{{ isWorker }}">
+        <t-button wx:if="{{ item.status === '待处理' }}" theme="primary" size="small" bind:tap="toShowStartModal">开始处理</t-button>
+        <t-button wx:if="{{ item.status === '处理中' }}" theme="primary" size="small" bind:tap="toShowFinishModal">已完成</t-button>
+      </view>
+      <t-dialog visible="{{showStartModal}}" title="上传信息" confirm-btn="确定" cancel-btn="取消" data-status="{{ 2 }}" data-id="{{ item.id }}" bind:confirm="startService" bind:cancel="toShowStartModal">
+        <t-input borderless slot="content" placeholder="请输入描述" value="{{ desc }}" bind:change="getDesc" />
+        <image style="margin: 20rpx; width: 400rpx; height: 400rpx;" slot="content" wx:if="{{ img_url }}" src="{{ img_url }}" mode="" />
+        <t-button slot="content" theme="primary" bind:tap="uploadImg">{{ img_url ? '重新上传' : '上传照片' }}</t-button>
+      </t-dialog>
+      <t-dialog visible="{{showFinishModal}}" title="上传信息" confirm-btn="确定" cancel-btn="取消" data-status="{{ 3 }}" data-id="{{ item.id }}" bind:confirm="startService" bind:cancel="toShowFinishModal">
+        <t-input borderless slot="content" placeholder="请输入描述" value="{{ desc }}" bind:change="getDesc" />
+        <image style="margin: 20rpx; width: 400rpx; height: 400rpx;" slot="content" wx:if="{{ img_url }}" src="{{ img_url }}" mode="" />
+        <t-button slot="content" theme="primary" bind:tap="uploadImg">{{ img_url ? '重新上传' : '上传照片' }}</t-button>
+      </t-dialog>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="advice-page">
+  <view class="form-item">
+    <t-input label="姓名" placeholder="请输入姓名" value="{{ name }}" bind:change="getName" />
+  </view>
+  <view class="form-item">
+    <t-input label="手机号码" placeholder="请输入手机号码" value="{{ phone }}" bind:change="getPhone" />
+  </view>
+  <view class="form-item">
+    <t-textarea label="反馈说明" placeholder="请输入反馈说明" disableDefaultPadding="{{true}}" autosize="{{autosize}}" value="{{ content }}" bind:change="getContent" />
+  </view>
+  <view class="btn-item">
+    <t-button class="submit-btn" theme="primary" bind:tap="submit">提交</t-button>
+  </view>
+</view>

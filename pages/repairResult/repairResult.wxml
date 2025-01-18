@@ -1,0 +1,12 @@
+<view class="repair-result-page">
+  <view class="start-view">
+    <view class="title">开始处理中图片</view>
+    <image class="img" src="{{ info.start_info.img_url }}" mode=""/>
+    <view class="desc">描述：{{ info.start_info.desc }}</view>
+  </view>
+  <view class="finish-view">
+    <view class="title">维修完成图片</view>
+    <image class="img" src="{{ info.finish_info.img_url }}" mode=""/>
+    <view class="desc">描述：{{ info.finish_info.desc }}</view>
+  </view>
+</view>

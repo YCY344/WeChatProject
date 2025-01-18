@@ -1,0 +1,79 @@
+<view class="repair-page">
+  <view class="form-item">
+    <t-input label="姓名" placeholder="请输入姓名" value="{{ name }}" bind:change="getName" />
+  </view>
+  <view class="form-item">
+    <t-input label="手机号码" placeholder="请输入手机号码" value="{{ phone }}" bind:change="getPhone" />
+  </view>
+
+
+
+  <!-- <view class="form-item">
+    <t-input label="门牌号" placeholder="请输入门牌号" value="{{ house_number }}" bind:change="getHouseNumber" />
+  </view> -->
+
+  <view class="form-item">  
+  <!-- 选择宿舍栋数 -->  
+  <t-cell class="mb-16" title="宿舍栋数" arrow hover note="{{building_number}}" bind:click="showBuildingPicker" />  
+  
+  <!-- 选择宿舍号 -->  
+  <t-cell class="mb-16" title="宿舍号" arrow hover note="{{dormitory_number}}" bind:click="showDormitoryPicker" />  
+</view>  
+
+<!-- 宿舍栋数选择器 -->  
+<t-picker   
+  visible="{{buildingPickerVisible}}"   
+  value="{{building_number}}"
+  title="选择宿舍栋数"   
+  cancelBtn="取消"   
+  confirmBtn="确认"   
+  bindchange="onBuildingPickerChange"   
+  bindcancel="hideBuildingPicker">  
+    <t-picker-item options="{{buildingList}}" />  
+</t-picker>  
+
+<!-- 宿舍号选择器 -->  
+<t-picker   
+  visible="{{dormitoryPickerVisible}}"  
+  value="{{dormitory_number}}" 
+  title="选择宿舍号"   
+  cancelBtn="取消"   
+  confirmBtn="确认"   
+  bindchange="onDormitoryPickerChange"   
+  bindcancel="hideDormitoryPicker">  
+    <t-picker-item options="{{dormitoryList}}" />  
+</t-picker>
+
+
+
+
+  <view class="form-item">
+    <t-cell title="预约上门时间" hover note="{{datetimeText}}" arrow bindtap="showPicker" t-class="panel-item" />
+
+    <t-date-time-picker title="选择预约上门时间" visible="{{datetimeVisible}}" mode="second" value="{{datetime}}" format="YYYY-MM-DD HH:mm:ss" bindchange="onConfirm" bindpick="onColumnChange" bindcancel="hidePicker" />
+
+  </view>
+  <view class="form-item">
+    <t-cell class="mb-16" title="故障类型" arrow hover note="{{fault_type}}" bind:click="onFaultPicker" />
+  </view>
+
+  <t-picker visible="{{pickerVisible}}" value="{{fault_type}}" title="选择故障类型" cancelBtn="取消" confirmBtn="确认" bindchange="onPickerChange" bindpick="onColumnChange" bindcancel="onPickerCancel">
+  <t-picker-item options="{{faultList}}" />
+</t-picker>
+
+
+  <view class="upload-view">
+    <view class="title">上传故障图片</view>
+    <t-upload mediaType="{{['video','image']}}" max="{{6}}" files="{{fileList}}" bind:add="handleAdd" bind:remove="handleRemove">
+    </t-upload>
+  </view>
+
+
+  <view class="form-item">
+    <t-textarea label="故障描述" placeholder="请输入故障描述" disableDefaultPadding="{{true}}" autosize="{{autosize}}" value="{{ fault_desc }}" bind:change="getFaultDesc" />
+  </view>
+
+  <view class="btn-item">
+    <t-button class="submit-btn" theme="primary" bind:tap="submit">提交</t-button>
+  </view>
+</view>

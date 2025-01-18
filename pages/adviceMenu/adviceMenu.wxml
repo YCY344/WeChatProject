@@ -1,0 +1,6 @@
+<view class="advice-menu-page">
+  <view class="container">
+    <t-cell title="开始反馈" description="针对学校存在的问题进行意见反馈" hover arrow url="../advice/advice" />
+    <t-cell title="查看我的反馈" description="之前的反馈都在这里" hover arrow url="../myAdvice/myAdvice" />
+  </view>
+</view>

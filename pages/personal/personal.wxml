@@ -1,0 +1,27 @@
+<view class="personal-page">
+  <view class="info-container" bind:tap="toGetInfo" style="background-image: url('../../assets/personbj.jfif'); background-size: cover; background-position: center; background-repeat: no-repeat;">  
+    <image class="avatar" src="{{ wxLogin ? userInfo.avatarUrl : '../../assets/default-avatar.png' }}" mode=""/>  
+    <view class="nickName" wx:if="{{ wxLogin }}">  
+      {{ userInfo.nickName }}  
+    </view>  
+    <view class="text-list" wx:else>  
+      <view class="title">微信授权</view>  
+      <view class="desc">授权后才能同步您的数据</view>  
+    </view>  
+  </view>
+
+  
+  <t-button class="quit-btn" theme="danger" bind:tap="quitLogin">退出登录</t-button>
+  <t-fab
+  icon="service"
+  text="智能客服"
+  aria-label="增加"
+  usingCustomNavbar
+  draggable
+  y-bounds="{{[0, 32]}}"
+  bind:click="handleClick"
+  bind:dragstart="handleDragStart"
+  bind:dragend="handleDragEnd"
+></t-fab>
+
+</view>

@@ -1,0 +1,53 @@
+.login-page {  
+  width: 100vw;  
+  height: 100vh;  
+  display: flex; /* 使用 flexbox 进行布局 */  
+  justify-content: center; /* 水平居中 */  
+  align-items: center; /* 垂直居中 */  
+  background-size: cover; /* 确保背景图片覆盖整个页面 */  
+  background-position: center; /* 背景居中 */  
+  background-repeat: no-repeat; /* 不重复背景图 */  
+}  
+
+.container {  
+  background-color: rgba(255, 255, 255, 0.9); /* 调整透明度以增强可读性 */  
+  width: 90%;  
+  max-width: 600rpx;  
+  margin: 0 auto;  
+  padding: 40rpx;  
+  border-radius: 20rpx;  
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 增强阴影效果 */  
+}  
+
+.btn-item {  
+  margin-top: 40rpx;  
+}  
+
+.btn-item .t-button {  
+  width: 100%; /* 按钮占满容器 */  
+  margin: 0 auto;  
+  display: block;  
+  transition: background-color 0.3s; /* 按钮交互效果 */  
+  border: none; /* 无边框 */  
+  border-radius: 5rpx; /* 圆角按钮 */  
+}  
+
+.btn-item .t-button:hover {  
+  background-color: #0056b3; /* 悬停时背景色 */  
+  transform: scale(1.05); /* 悬停时略微放大 */  
+}  
+
+.title {  
+  font-size: 46rpx;  
+  font-weight: bold;  
+  margin-bottom: 20rpx;  
+  text-align: center; /* 标题居中 */  
+}  
+
+.to-register-text {  
+  color: #007aff; /* 更统一的蓝色，提升视觉一致性 */  
+  text-align: right;  
+  padding: 10rpx; /* 减少内边距，更和谐 */  
+  font-size: 28rpx; /* 增加字体大小，易读 */  
+  cursor: pointer; /* 鼠标悬停时显示手形光标 */  
+}

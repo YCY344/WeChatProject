@@ -1,0 +1,7 @@
+.container {
+  width: 90%;
+  margin: 40rpx auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40rpx 0;
+}

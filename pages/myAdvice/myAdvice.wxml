@@ -1,0 +1,21 @@
+<view class="repair-history-page">
+  <t-tabs value="{{tabNow}}" bind:change="onTabsChange" t-class="custom-tabs">
+    <block wx:for="{{ tabList }}" wx:key="index">
+      <t-tab-panel label="{{ item.label }}" value="{{ item.value }}" />
+    </block>
+  </t-tabs>
+  <view class="order-list">
+    <view class="order-item" wx:for="{{ list }}" wx:key="index" bind:tap="toResult" data-item="{{ item }}">
+      <view class="top">
+        <view class="top-left">{{ item.create_time }}</view>
+        <view class="top-right">{{ item.status }}</view>
+      </view>
+      <view class="info">
+        <view class="info-item">
+          <text class="label">反馈内容：</text>
+          <text class="value">{{ item.content }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

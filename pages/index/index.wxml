@@ -1,0 +1,61 @@
+<view class="index-page">
+  <t-notice-bar
+  visible="{{true}}"
+  prefixIcon="sound"
+  marquee="{{marquee2}}"
+  content="{{marqueeContent}}"
+></t-notice-bar>
+
+  <t-swiper
+    current="{{current}}"
+    autoplay="{{autoplay}}"
+    duration="{{duration}}"
+    interval="{{interval}}"
+    list="{{swiperList}}"
+    navigation="{{ { type: 'dots-bar' } }}"
+  />
+  <view class="box-list">
+    <view class="box-item" bind:tap="toDetail" data-url="../repairMenu/repairMenu">
+      <image src="../../assets/weixiu.png" mode=""/>
+      <view class="text-list">
+        <view class="title">故障报修</view>
+        <view class="desc">解决故障问题</view>
+      </view>
+    </view>
+    <view class="box-item" bind:tap="toDetail" data-url="../adviceMenu/adviceMenu">
+      <image src="../../assets/jianyi.png" mode=""/>
+      <view class="text-list">
+        <view class="title">意见反馈</view>
+        <view class="desc">提升学校建设</view>
+      </view>
+    </view>
+  </view>
+
+  <t-fab
+  icon="service"
+  text="智能客服"
+  aria-label="增加"
+  usingCustomNavbar
+  draggable
+  y-bounds="{{[0, 32]}}"
+  bind:click="handleClick"
+  bind:dragstart="handleDragStart"
+  bind:dragend="handleDragEnd"
+></t-fab>
+
+<t-popup visible="{{visible}}" bind:visible-change="onVisibleChange" placement="bottom">
+  <view class="block">
+    <view class="header">
+      <view class="title">13565248688</view>
+    </view>
+  </view>
+</t-popup>
+<t-button class="button1" block size="large" variant="outline" theme="primary" bind:tap="handlePopup">如有需要，请拨打宿管电话</t-button>
+
+
+<view class="footer-example">
+  <t-footer logo="{{logo}}" />
+</view>
+
+</view>
+
